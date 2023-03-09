@@ -1,0 +1,38 @@
+.logotype {
+  @include hover {
+    opacity: 0.8;
+  }
+
+  a {
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.logotype__img {
+  @include vp-320 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.logotype__title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+
+  color: #f2f5f7;
+}
+
+.logotype__subtitle {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
