@@ -1,6 +1,7 @@
 .main-header {
   width: 100%;
   padding: 30px 0 35px;
+  z-index: 10;
   background: $blackpearl-to-bottom;
 
   @include vp-770 {
@@ -23,7 +24,6 @@
 .main-header__logo {
   display: flex;
   margin-right: 8px;
-  flex-shrink: 0;
 
   @include vp-770 {
     margin-right: 0;
