@@ -41,7 +41,7 @@
     min-height: 100%;
     padding: 60px 40px;
 
-    @include vp-770 {
+    @include vp-1023 {
       padding: 60px 16px;
     }
   }
@@ -65,7 +65,7 @@
 
     background-color: $color-default-white;
 
-    @include vp-770 {
+    @include vp-1023 {
       width: 100%;
       padding: 20px;
     }
@@ -97,7 +97,7 @@
       width: auto;
       background-color: $color-deepsky-blue;
 
-      @include vp-770 {
+      @include vp-1023 {
         width: 100%;
       }
     }

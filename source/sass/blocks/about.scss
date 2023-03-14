@@ -1,0 +1,83 @@
+.about__wrapper {
+  display: flex;
+  margin: 95px 0 100px;
+
+  @include vp-1023 {
+    margin: 50px 0 80px;
+  }
+
+  @include vp-770 {
+    margin: 20px 0 80px;
+  }
+}
+
+.about__year {
+  position: relative;
+  display: block;
+  margin-bottom: auto;
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-size: 156.248px;
+  line-height: 220px;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  background-image: url("../img/year_background.jpg");
+  background-position: 40% 20%;
+  background-clip: text;
+  color: transparent;
+
+  @include retina {
+    background-image: url("../img/year_background@2x.jpg");
+    background-size: 200%;
+    background-position: 42% 40%;
+  }
+
+  @include vp-770 {
+    display: none;
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.about__title-text {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #041827;
+
+  @include vp-770 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about__description {
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.about__description-text {
+  color: #041827;
+
+  @include vp-770 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.about__button {
+  width: 180px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-770 {
+    width: 160px;
+    height: 35px;
+  }
+}

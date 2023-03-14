@@ -14,6 +14,9 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/control";
+@import "global/accordion";
+@import "global/data-accordion";
 
 // Blocks
 // ---------------------------------
@@ -26,7 +29,10 @@
 @import "blocks/logotype";
 @import "blocks/main-header";
 @import "blocks/form";
-@import "blocks/control";
+@import "blocks/introducing";
+@import "blocks/advantages";
+@import "blocks/about";
+@import "blocks/footer";
 
 // ---------------------------------
 

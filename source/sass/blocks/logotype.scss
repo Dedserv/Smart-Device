@@ -1,4 +1,7 @@
 .logotype {
+  display: flex;
+  flex-shrink: 0;
+
   @include hover {
     opacity: 0.8;
   }
@@ -10,11 +13,24 @@
   }
 }
 
+.logotype__link {
+  display: flex;
+  margin-right: 8px;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+}
+
 .logotype__img {
-  @include vp-320 {
+  @include vp-770 {
     width: 35px;
     height: 35px;
   }
+}
+
+.logotype__inner {
+  margin-left: 15px;
 }
 
 .logotype__title {
