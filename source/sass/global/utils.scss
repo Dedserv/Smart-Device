@@ -69,3 +69,12 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.is-active {
+  .footer__navigation-inner {
+    padding-bottom: 20px;
+  }
+  .footer__contact-inner {
+    padding-bottom: 20px;
+  }
+}

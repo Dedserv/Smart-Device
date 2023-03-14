@@ -12,6 +12,8 @@
   text-transform: uppercase;
   border-radius: 3px;
   background-color: transparent;
+  border: none;
+  outline: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
@@ -26,12 +28,12 @@
   }
 }
 
-.btn-contact {
+.btn--contact {
   width: 160px;
   height: 40px;
   border: 1px solid #f2f5f7;
 
-  @include vp-770 {
+  @include vp-1023 {
     display: none;
   }
 }
@@ -50,5 +52,74 @@
   @include hover {
     opacity: 1;
     background-color: #000;
+  }
+}
+
+.btn--primary {
+  font-size: 18px;
+  line-height: 21px;
+  background: #00b2ff;
+}
+
+.btn--secondary {
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+
+  &:hover {
+    transition: 0.2s linear;
+    background-color: #00b2ff;
+    color: $color-default-white;
+  }
+
+  &:active {
+    background-color: #009cdf;
+  }
+
+  &:focus {
+    outline: 2px solid #000;
+    outline-offset: 1px;
+  }
+}
+
+.btn-unfold {
+  display: none;
+
+  @include vp-770 {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 1px;
+      background-color: #c4c4c4;
+      top: 7.5px;
+      right: 0;
+    }
+  }
+}
+
+.btn-unfold--show {
+  @include vp-770 {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 1px;
+      background-color: #c4c4c4;
+      top: 7.5px;
+      right: 0;
+      transform: rotate(90deg);
+    }
   }
 }
