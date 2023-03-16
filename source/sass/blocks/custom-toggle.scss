@@ -1,42 +1,32 @@
 .custom-toggle {
   position: relative;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 300;
-
-  display: flex;
-  width: 500px;
-  padding: 14px 0 10px 36px;
-
-  @media screen and (max-width: 767px) {
-    padding: 14px 0 10px 0;
-    width: 100%;
-  }
-
-  &:last-of-type {
-    padding: 14px 0 58px 36px;
-
-    @media screen and (max-width: 767px) {
-      padding: 14px 0 58px 0;
-    }
-  }
+  max-width: 260px;
 
   input {
     position: absolute;
-
     width: 1px;
     height: 1px;
     margin: -1px;
-
     clip: rect(0 0 0 0);
   }
 
   label {
+    font-family: "PT Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    opacity: 0.8;
     position: relative;
-
-    padding-left: 52px;
-
+    display: inline-block;
+    padding-left: 26px;
+    margin-top: 10px;
     cursor: pointer;
+
+    @include vp-770 {
+      margin-top: 5px;
+    }
 
     span {
       margin-bottom: 0;
@@ -47,31 +37,17 @@
   &--checkbox {
     .custom-toggle__icon {
       position: absolute;
-      top: 0;
+      top: 50%;
       left: 0;
+      transform: translateY(-50%);
 
-      width: 28px;
-      height: 28px;
+      width: 15px;
+      height: 15px;
 
-      border: 1.5px solid $color-neon-blue;
+      border: 1px solid $color-default-white;
+      border-radius: 2px;
 
       transition: border $trans-default;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        width: 20px;
-        height: 20px;
-
-        background-color: rgba($color-neon-blue, 0);
-
-        transform: translate(-50%, -50%);
-
-        transition: background-color $trans-default;
-      }
     }
   }
 
@@ -112,7 +88,14 @@
     border: 1.5px solid $color-neon-blue;
 
     &::before {
-      background-color: $color-neon-blue;
+      content: "";
+      position: absolute;
+      background-image: url("/img/svg/apply.svg");
+      background-repeat: no-repeat;
+      top: 3px;
+      left: 2px;
+      height: 6px;
+      width: 7px;
     }
   }
 

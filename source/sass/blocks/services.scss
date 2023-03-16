@@ -123,6 +123,7 @@
 }
 
 .services__img {
+  background-color: $color-black-pearl;
   @include vp-1023 {
     width: 100%;
   }

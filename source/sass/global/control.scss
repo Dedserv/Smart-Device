@@ -1,55 +1,55 @@
-.control {
-  position: relative;
-  padding-left: 9px;
+// .control {
+//   position: relative;
+//   padding-left: 9px;
 
-  @include hover {
-    .control__label {
-      color: rgba(229, 229, 229, 0.85);
-    }
-    .control__element {
-      border: 1px solid rgba(229, 229, 229, 0.85);
-    }
-  }
-}
+//   @include hover {
+//     .control__label {
+//       color: rgba(229, 229, 229, 0.85);
+//     }
+//     .control__element {
+//       border: 1px solid rgba(229, 229, 229, 0.85);
+//     }
+//   }
+// }
 
-.control__input {
-  &:focus {
-    + .control__element {
-      border: 1px solid rgba(229, 229, 229, 0.85);
-    }
-    ~ .control__label {
-      color: rgba(229, 229, 229, 0.85);
-    }
-  }
+// .control__input {
+//   &:focus {
+//     + .control__element {
+//       border: 1px solid rgba(229, 229, 229, 0.85);
+//     }
+//     ~ .control__label {
+//       color: rgba(229, 229, 229, 0.85);
+//     }
+//   }
 
-  &:checked {
-    + .control__element {
-      &:before {
-        content: "";
-        position: absolute;
-        background-image: url("../../img/svg/apply.svg");
-        background-repeat: no-repeat;
-        top: 3px;
-        left: 2px;
-        height: 6px;
-        width: 7px;
-      }
-    }
-  }
-}
+//   &:checked {
+//     + .control__element {
+//       &:before {
+//         content: "";
+//         position: absolute;
+//         background-image: url("../../img/svg/apply.svg");
+//         background-repeat: no-repeat;
+//         top: 3px;
+//         left: 2px;
+//         height: 6px;
+//         width: 7px;
+//       }
+//     }
+//   }
+// }
 
-.control__element {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
-  border: 1px solid $color-default-white;
-  border-radius: 2px;
-}
+// .control__element {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   width: 15px;
+//   height: 15px;
+//   border: 1px solid $color-default-white;
+//   border-radius: 2px;
+// }
 
-.control__label {
-  padding-left: 25px;
-  font-size: 14px;
-  line-height: 16px;
-}
+// .control__label {
+//   padding-left: 25px;
+//   font-size: 14px;
+//   line-height: 16px;
+// }
