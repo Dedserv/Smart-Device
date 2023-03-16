@@ -1,7 +1,7 @@
 .btn {
   display: inline-flex;
   padding: 10px 15px;
-  font-family: "Roboto Condensed";
+  font-family: $ff-main-Roboto_condensed;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -31,14 +31,16 @@
 .btn--contact {
   width: 160px;
   height: 40px;
-  border: 1px solid #f2f5f7;
+  border: 1px solid $color-alice-blue;
 
   @include vp-1023 {
     display: none;
   }
 }
 
-.btn--modal {
+.btn--form {
+  max-width: 420px;
+  width: 100%;
   font-size: 16px;
   line-height: 19px;
   background: #041427;
@@ -51,32 +53,32 @@
 
   @include hover {
     opacity: 1;
-    background-color: #000;
+    background-color: $color-default-black;
   }
 }
 
 .btn--primary {
   font-size: 18px;
   line-height: 21px;
-  background: #00b2ff;
+  background: $color-deepsky-blue;
 }
 
 .btn--secondary {
-  border: 1px solid #00b2ff;
-  color: #00b2ff;
+  border: 1px solid $color-deepsky-blue;
+  color: $color-deepsky-blue;
+  transition: background-color $trans-default;
 
   &:hover {
-    transition: 0.2s linear;
-    background-color: #00b2ff;
+    background-color: $color-deepsky-blue;
     color: $color-default-white;
   }
 
   &:active {
-    background-color: #009cdf;
+    background-color: $color-pacific-blue;
   }
 
   &:focus {
-    outline: 2px solid #000;
+    outline: 2px solid $color-default-black;
     outline-offset: 1px;
   }
 }
@@ -102,7 +104,7 @@
       content: "";
       width: 15px;
       height: 1px;
-      background-color: #c4c4c4;
+      background-color: $color-silver;
       top: 7.5px;
       right: 0;
     }
@@ -116,7 +118,7 @@
       content: "";
       width: 15px;
       height: 1px;
-      background-color: #c4c4c4;
+      background-color: $color-silver;
       top: 7.5px;
       right: 0;
       transform: rotate(90deg);

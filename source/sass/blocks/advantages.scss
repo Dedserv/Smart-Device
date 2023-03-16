@@ -16,9 +16,10 @@
 .advantages__card {
   position: relative;
   padding: 40px 30px 35px 45px;
-  border: 1px solid #ebebeb;
+  border: 1px solid $color-whisper;
   width: 48%;
   margin-bottom: 30px;
+  transition: background-color $trans-default;
 
   &::before {
     position: absolute;
@@ -27,26 +28,22 @@
     left: 0;
     width: 5px;
     height: 100%;
-    background-color: #00b2ff;
+    background-color: $color-deepsky-blue;
   }
 
   &:hover {
-    transition: linear 0.2s;
-    background-color: #00b2ff;
+    background-color: $color-deepsky-blue;
 
     .advantages__title-text {
-      transition: linear 0.2s;
-      color: #f2f5f7;
+      color: $color-alice-blue;;
     }
 
     .advantages__description-text {
-      transition: linear 0.2s;
-      color: #f2f5f7;
+      color: $color-alice-blue;;
     }
 
     .advantages__image path {
-      transition: linear 0.2s;
-      fill: #f2f5f7;
+      fill: $color-alice-blue;
     }
   }
 
@@ -70,6 +67,10 @@
 }
 
 .advantages__image {
+  path {
+    transition: fill $trans-default;
+  }
+
   @include vp-770 {
     width: 30px;
     height: 30px;
@@ -83,13 +84,13 @@
 }
 
 .advantages__title-text {
-  font-family: "Roboto Condensed";
+  font-family: $ff-main-Roboto_condensed;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
-  color: #00b2ff;
-
+  color: $color-deepsky-blue;
+  transition: color $trans-default;
   @include vp-770 {
     font-size: 20px;
     line-height: 28px;
@@ -102,8 +103,8 @@
 }
 
 .advantages__description-text {
-  color: #041827;
-
+  color: $color-black-pearl;
+  transition: color $trans-default;
   @include vp-770 {
     font-size: 14px;
     line-height: 19px;

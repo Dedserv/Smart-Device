@@ -1,0 +1,12 @@
+.title {
+  font-family: $ff-main-Roboto_condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include vp-770 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}

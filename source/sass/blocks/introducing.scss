@@ -1,10 +1,10 @@
 .introducing {
   position: relative;
-  height: 760px;
+  height: 880px;
   &::before {
     content: "";
     position: absolute;
-    top: -120px;
+    top: 0;
     z-index: 1;
     height: 880px;
     width: 100%;
@@ -37,11 +37,10 @@
   }
 
   @include vp-1023 {
-    height: 540px;
+    height: 640px;
 
     &::before {
       height: 640px;
-      top: -100px;
       background-image: url("../img/background-img_tablet.jpg");
       background-position: 55% 0;
 
@@ -57,11 +56,10 @@
   }
 
   @include vp-770 {
-    height: 490px;
+    height: 560px;
 
     &::before {
       height: 560px;
-      top: -70px;
       background-image: url("../img/background-img_mobile.jpg");
 
       @include retina {
@@ -76,22 +74,24 @@
 
 .introducing__inner {
   position: absolute;
-  top: 165px;
+  top: 285px;
   left: 22%;
   z-index: 20;
 
   @include vp-1023 {
+    top: 180px;
     left: 0;
     padding: 0 50px;
   }
 
   @include vp-770 {
+    top: 150px;
     padding: 0 25px;
   }
 }
 
 .introducing__title-text {
-  font-family: "Roboto Condensed";
+  font-family: $ff-main-Roboto_condensed;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;

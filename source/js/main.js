@@ -27,6 +27,10 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const form = new Form();
+form.init();
+window.form = form;
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

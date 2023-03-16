@@ -1,6 +1,7 @@
 .logotype {
   display: flex;
   flex-shrink: 0;
+  transition: opacity 0.2s linear;
 
   @include hover {
     opacity: 0.8;
@@ -34,17 +35,17 @@
 }
 
 .logotype__title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-main-Roboto_condensed;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
 
-  color: #f2f5f7;
+  color: $color-alice-blue;
 }
 
 .logotype__subtitle {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: $ff-main-Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
