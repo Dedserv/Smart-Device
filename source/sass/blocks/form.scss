@@ -40,19 +40,23 @@
   flex-grow: 1;
   flex-wrap: wrap;
   max-width: 580px;
+  min-width: 396px;
+  justify-content: space-between;
   width: 100%;
 
   @include vp-1023 {
     max-width: 100%;
+    justify-content: none;
   }
 
   @include vp-770 {
+    min-width: auto;
     flex-direction: column;
   }
 }
 
 .form__content {
-  margin-left: 115px;
+  margin-left: 25px;
 
   @include vp-1023 {
     margin: 0;
@@ -103,7 +107,7 @@
   margin-right: 30px;
   padding: 0;
 
-  &:last-of-type {
+  &:nth-child(2n) {
     margin-right: 0;
   }
 
@@ -169,14 +173,14 @@
 
 .form__button {
   max-width: 265px;
-  flex-grow: 1;
-  margin-right: 50px;
+  width: 44%;
 
   @include vp-1023 {
     margin-right: 85px;
   }
   @include vp-770 {
     max-width: 100%;
+    width: 100%;
     margin-right: 0;
   }
 }
