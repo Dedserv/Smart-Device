@@ -15,7 +15,7 @@
   position: relative;
   display: block;
   margin-bottom: auto;
-  font-family: "Roboto Condensed";
+  font-family: $ff-main-Roboto_condensed;
   font-weight: 700;
   font-size: 156.248px;
   line-height: 220px;
@@ -43,32 +43,28 @@
   padding: 0;
 }
 
-.about__title-text {
-  font-family: "Roboto Condensed";
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-  color: #041827;
-
-  @include vp-770 {
-    font-size: 28px;
-    line-height: 39px;
-  }
+.about__title--text {
+  color: $color-black-pearl;
 }
 
 .about__description {
   margin: 0;
   margin-bottom: 22px;
+
+  &:first-child {
+    margin-bottom: 0;
+  }
 }
 
-.about__description-text {
-  color: #041827;
+.about__description--text {
+  color: $color-black-pearl;
 
   @include vp-770 {
     font-size: 14px;
     line-height: 18px;
   }
 }
+
 
 .about__button {
   width: 180px;

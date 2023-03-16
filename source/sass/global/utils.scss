@@ -1,6 +1,5 @@
 .wrapper {
   position: relative;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -71,6 +70,12 @@
 }
 
 .is-active {
+  .about__description {
+    &:first-child {
+      margin-bottom: 22px;
+    }
+  }
+
   .footer__navigation-inner {
     padding-bottom: 20px;
   }
