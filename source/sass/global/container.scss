@@ -6,9 +6,9 @@
 
   @include vp-1023 {
     padding: 0 50px;
-    }
+  }
 
-    @include vp-770 {
-      padding: 0 25px;
-    }
+  @include vp-768 {
+    padding: 0 25px;
+  }
 }

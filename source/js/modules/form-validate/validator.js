@@ -1,6 +1,6 @@
-import {getLimitationsRegEx, getMatrixLimitationsRegEx, getMailRegEx} from './regular-expression';
-import {matrixReplace} from './matrix';
-import {Message} from './render-message';
+import {getLimitationsRegEx, getMatrixLimitationsRegEx, getMailRegEx} from "./regular-expression";
+import {matrixReplace} from "./matrix";
+import {Message} from "./render-message";
 
 export class Validator {
   constructor() {
@@ -12,23 +12,23 @@ export class Validator {
   }
 
   _renderMessage(trigger, parent, input) {
-    if (!parent.hasAttribute('data-required') && !input.value) {
+    if (!parent.hasAttribute("data-required") && !input.value) {
       return;
     }
     if (!trigger) {
-      parent.classList.add('is-invalid');
-      if (parent.hasAttribute('data-message-base') && !input.value) {
-        this._message.renderMessage(parent, parent.dataset.messageBase, 'invalid');
-      } else if (parent.hasAttribute('data-message-extra') && input.value) {
-        this._message.renderMessage(parent, parent.dataset.messageExtra, 'invalid');
-      } else if (!parent.hasAttribute('data-message-extra') && parent.hasAttribute('data-message-base') && input.value) {
-        this._message.renderMessage(parent, parent.dataset.messageBase, 'invalid');
+      parent.classList.add("is-invalid");
+      if (parent.hasAttribute("data-message-base") && !input.value) {
+        this._message.renderMessage(parent, parent.dataset.messageBase, "invalid");
+      } else if (parent.hasAttribute("data-message-extra") && input.value) {
+        this._message.renderMessage(parent, parent.dataset.messageExtra, "invalid");
+      } else if (!parent.hasAttribute("data-message-extra") && parent.hasAttribute("data-message-base") && input.value) {
+        this._message.renderMessage(parent, parent.dataset.messageBase, "invalid");
       } else {
         this._message.removeMessage(parent);
       }
     } else {
-      if (parent.hasAttribute('data-message-success')) {
-        this._message.renderMessage(parent, parent.dataset.messageSuccess, 'valid');
+      if (parent.hasAttribute("data-message-success")) {
+        this._message.renderMessage(parent, parent.dataset.messageSuccess, "valid");
       } else {
         this._message.removeMessage(parent);
       }
@@ -36,25 +36,25 @@ export class Validator {
   }
 
   _setItemValidState(parent, input) {
-    if (!parent.hasAttribute('data-required') && !input.value) {
+    if (!parent.hasAttribute("data-required") && !input.value) {
       return;
     }
-    parent.classList.add('is-valid');
-    parent.classList.remove('is-invalid');
-    input.setAttribute('aria-invalid', 'false');
+    parent.classList.add("is-valid");
+    parent.classList.remove("is-invalid");
+    input.setAttribute("aria-invalid", "false");
     this._message.removeMessage(parent);
   }
 
   _setItemInvalidState(parent, input) {
-    if (!parent.hasAttribute('data-required') && !input.value) {
+    if (!parent.hasAttribute("data-required") && !input.value) {
       return;
     }
-    parent.classList.remove('is-valid');
-    input.setAttribute('aria-invalid', 'true');
+    parent.classList.remove("is-valid");
+    input.setAttribute("aria-invalid", "true");
   }
 
   _simpleLimitation(item, limitation) {
-    item.value = item.value.replace(this._getLimitationsRegEx(limitation), '');
+    item.value = item.value.replace(this._getLimitationsRegEx(limitation), "");
   }
 
   _matrixLimitation(item, matrix, limitation) {
@@ -63,7 +63,7 @@ export class Validator {
 
   _validateTextInput(parent, input) {
     let flag = true;
-    if (input.value.length >= (+input.getAttribute('minlength') || 1)) {
+    if (input.value.length >= (+input.getAttribute("minlength") || 1)) {
       this._setItemValidState(parent, input);
     } else {
       this._setItemInvalidState(parent, input);
@@ -74,7 +74,7 @@ export class Validator {
 
   _validateMatrixInput(parent, input) {
     let flag = true;
-    if (input.value.length === input.closest('[data-matrix]').dataset.matrix.length) {
+    if (input.value.length === input.closest("[data-matrix]").dataset.matrix.length) {
       this._setItemValidState(parent, input);
     } else {
       this._setItemInvalidState(parent, input);
@@ -85,7 +85,7 @@ export class Validator {
 
   _validateEmailInput(parent, input) {
     let flag = true;
-    if (new RegExp(this._getMailRegEx(), '').test(input.value)) {
+    if (new RegExp(this._getMailRegEx(), "").test(input.value)) {
       this._setItemValidState(parent, input);
     } else {
       this._setItemInvalidState(parent, input);
@@ -127,16 +127,16 @@ export class Validator {
   }
 
   _validateSelect(parent, input) {
-    const options = input.querySelectorAll('option');
-    const customSelectText = parent.querySelector('.custom-select__text');
-    input.setAttribute('aria-invalid', 'false');
+    const options = input.querySelectorAll("option");
+    const customSelectText = parent.querySelector(".custom-select__text");
+    input.setAttribute("aria-invalid", "false");
     let flag = true;
     if (this._findSelectedOption(options)) {
       this._setItemValidState(parent, input);
     } else {
       this._setItemInvalidState(parent, input);
-      parent.classList.remove('not-empty');
-      customSelectText.innerHTML = '';
+      parent.classList.remove("not-empty");
+      customSelectText.innerHTML = "";
       flag = false;
     }
     return flag;
@@ -155,33 +155,33 @@ export class Validator {
   _removeGroupAria(inputs) {
     inputs.forEach((input) => {
       if (!input.checked) {
-        input.removeAttribute('aria-required');
-        input.removeAttribute('aria-invalid');
+        input.removeAttribute("aria-required");
+        input.removeAttribute("aria-invalid");
       } else {
-        input.setAttribute('aria-required', true);
-        input.setAttribute('aria-invalid', false);
+        input.setAttribute("aria-required", true);
+        input.setAttribute("aria-invalid", false);
       }
     });
   }
 
   _setGroupAria(inputs) {
     inputs.forEach((input) => {
-      input.setAttribute('aria-required', true);
-      input.setAttribute('aria-invalid', true);
+      input.setAttribute("aria-required", true);
+      input.setAttribute("aria-invalid", true);
     });
   }
 
   _validateToggleGroup(parent) {
-    const formElements = parent.querySelectorAll('input');
+    const formElements = parent.querySelectorAll("input");
     let flag = true;
     if (this._returnCheckedElements(formElements)) {
       this._removeGroupAria(formElements);
-      parent.classList.remove('is-invalid');
-      parent.classList.add('is-valid');
+      parent.classList.remove("is-invalid");
+      parent.classList.add("is-valid");
       this._message.removeMessage(parent);
     } else {
       this._setGroupAria(formElements);
-      parent.classList.remove('is-valid');
+      parent.classList.remove("is-valid");
       flag = false;
     }
     return flag;
@@ -190,7 +190,7 @@ export class Validator {
   _customExample(parent, input) {
     let flag = true;
     if (!input.value.length) {
-      parent.dataset.messageBase = 'Поле обязательно к заполнению';
+      parent.dataset.messageBase = "Поле обязательно к заполнению";
       this._setItemInvalidState(parent, input);
       flag = false;
     } else if (input.value.length < input.minLength) {
@@ -202,7 +202,7 @@ export class Validator {
       this._setItemInvalidState(parent, input);
       flag = false;
     } else {
-      parent.dataset.messageSuccess = 'Поле заполнено корректно';
+      parent.dataset.messageSuccess = "Поле заполнено корректно";
       this._setItemValidState(parent, input);
       flag = true;
     }
@@ -223,23 +223,23 @@ export class Validator {
 
   _validateInput(type, parent, input) {
     switch (type) {
-      case 'text':
+      case "text":
         return this._validateTextInput(parent, input);
-      case 'matrix':
+      case "matrix":
         return this._validateMatrixInput(parent, input);
-      case 'email':
+      case "email":
         return this._validateEmailInput(parent, input);
-      case 'phone':
+      case "phone":
         return this._validatePhoneInput(parent, input);
-      case 'checkbox':
+      case "checkbox":
         return this._validateCheckbox(parent, input);
-      case 'select':
+      case "select":
         return this._validateSelect(parent, input);
-      case 'toggle-group':
+      case "toggle-group":
         return this._validateToggleGroup(parent, input);
-      case 'file':
+      case "file":
         return this._validateFile(parent, input);
-      case 'custom-example':
+      case "custom-example":
         return this._customExample(parent, input);
       default:
         return false;
@@ -247,27 +247,27 @@ export class Validator {
   }
 
   validateFormElement(formElement, fullValidate = false) {
-    const parent = formElement.closest('[data-validate-type]');
+    const parent = formElement.closest("[data-validate-type]");
     if (!parent) {
       return;
     }
 
-    if (!parent.hasAttribute('data-required')) {
-      const removeElement = parent.querySelector('input') || parent.querySelector('select') || parent.querySelector('textarea');
+    if (!parent.hasAttribute("data-required")) {
+      const removeElement = parent.querySelector("input") || parent.querySelector("select") || parent.querySelector("textarea");
 
       if (!removeElement.value) {
-        parent.classList.remove('is-valid');
-        parent.classList.remove('is-invalid');
+        parent.classList.remove("is-valid");
+        parent.classList.remove("is-invalid");
       }
     }
 
-    const onInputValidate = parent.hasAttribute('data-on-input-validate');
+    const onInputValidate = parent.hasAttribute("data-on-input-validate");
 
-    if (parent.hasAttribute('data-limitation')) {
+    if (parent.hasAttribute("data-limitation")) {
       this._simpleLimitation(formElement, parent.dataset.limitation);
     }
 
-    if (parent.dataset.validateType === 'matrix') {
+    if (parent.dataset.validateType === "matrix") {
       this._matrixLimitation(formElement, parent.dataset.matrix, this._getMatrixLimitationsRegEx(parent.dataset.matrixLimitation));
     }
 
@@ -281,9 +281,9 @@ export class Validator {
   _fullValidate(items) {
     let result = true;
     items.forEach((item) => {
-      const formElement = item.querySelector('input') || item.querySelector('select') || item.querySelector('textarea');
+      const formElement = item.querySelector("input") || item.querySelector("select") || item.querySelector("textarea");
       this.validateFormElement(formElement, true);
-      if (item.classList.contains('is-invalid')) {
+      if (item.classList.contains("is-invalid")) {
         result = false;
       }
     });
@@ -291,7 +291,7 @@ export class Validator {
   }
 
   validateForm(form) {
-    const validateItems = form.querySelectorAll('[data-validate-type]');
+    const validateItems = form.querySelectorAll("[data-validate-type]");
     const result = this._fullValidate(validateItems);
     return result;
   }

@@ -6,7 +6,7 @@
     margin: 50px 0 80px;
   }
 
-  @include vp-770 {
+  @include vp-768 {
     margin: 20px 0 80px;
   }
 }
@@ -17,7 +17,7 @@
   margin-bottom: auto;
   font-family: $ff-main-Roboto_condensed;
   font-weight: 700;
-  font-size: 156.248px;
+  font-size: 156px;
   line-height: 220px;
   transform: rotate(180deg);
   writing-mode: vertical-lr;
@@ -32,39 +32,40 @@
     background-position: 42% 40%;
   }
 
-  @include vp-770 {
+  @include vp-768 {
     display: none;
   }
 }
 
-.about__title {
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-}
-
-.about__title--text {
-  color: $color-black-pearl;
-}
-
-.about__description {
-  margin: 0;
-  margin-bottom: 22px;
-
-  &:first-child {
-    margin-bottom: 0;
-  }
-}
-
-.about__description--text {
+.about__inner {
   color: $color-black-pearl;
 
-  @include vp-770 {
-    font-size: 14px;
-    line-height: 18px;
+  h2 {
+    font-family: $ff-main-Roboto_condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+
+    @include vp-768 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 22px;
+
+    @include vp-768 {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
-
 
 .about__button {
   width: 180px;
@@ -72,7 +73,7 @@
   align-items: center;
   justify-content: center;
 
-  @include vp-770 {
+  @include vp-768 {
     width: 160px;
     height: 35px;
   }

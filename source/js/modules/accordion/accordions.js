@@ -15,12 +15,12 @@ export class Accordions {
 
   _documentClickHandler(evt) {
     const target = evt.target;
-    if (!target.closest('[data-accordion="button"]')) {
+    if (!target.closest("[data-accordion=\"button\"]")) {
       return;
     }
 
     evt.preventDefault();
-    const parent = target.closest('[data-accordion="parent"]');
+    const parent = target.closest("[data-accordion=\"parent\"]");
 
     if (
       parent.dataset.destroy &&
@@ -29,7 +29,7 @@ export class Accordions {
       return;
     }
 
-    const element = target.closest('[data-accordion="element"]');
+    const element = target.closest("[data-accordion=\"element\"]");
     if (element.classList.contains("is-active")) {
       this.closeAccordion(element);
       return;
@@ -46,9 +46,9 @@ export class Accordions {
   }
 
   closeAllAccordion(parent) {
-    const elements = parent.querySelectorAll('[data-accordion="element"]');
+    const elements = parent.querySelectorAll("[data-accordion=\"element\"]");
     elements.forEach((element) => {
-      const currentParent = element.closest('[data-accordion="parent"]');
+      const currentParent = element.closest("[data-accordion=\"parent\"]");
       if (currentParent === parent) {
         this.closeAccordion(element);
       }
@@ -57,7 +57,7 @@ export class Accordions {
 
   updateAccordionsHeight(element = null) {
     if (element) {
-      const content = element.querySelector('[data-accordion="content"]');
+      const content = element.querySelector("[data-accordion=\"content\"]");
       content.style.transition = "none";
       content.style.maxHeight = `${content.scrollHeight}px`;
       setTimeout(() => {
@@ -67,12 +67,12 @@ export class Accordions {
     }
 
     const closeElements = document.querySelectorAll(
-      '[data-accordion="element"]:not(.is-active)'
+        "[data-accordion=\"element\"]:not(.is-active)"
     );
 
     closeElements.forEach((closeElement) => {
-      const parent = closeElement.closest('[data-accordion="parent"]');
-      const content = closeElement.querySelector('[data-accordion="content"]');
+      const parent = closeElement.closest("[data-accordion=\"parent\"]");
+      const content = closeElement.querySelector("[data-accordion=\"content\"]");
       if (
         parent.dataset.destroy &&
         !window.matchMedia(parent.dataset.destroy).matches
@@ -84,11 +84,11 @@ export class Accordions {
     });
 
     const openElements = document.querySelectorAll(
-      '[data-accordion="element"].is-active'
+        "[data-accordion=\"element\"].is-active"
     );
     openElements.forEach((openElement) => {
-      const content = openElement.querySelector('[data-accordion="content"]');
-      const parent = openElement.closest('[data-accordion="parent"]');
+      const content = openElement.querySelector("[data-accordion=\"content\"]");
+      const parent = openElement.closest("[data-accordion=\"parent\"]");
       if (
         parent.dataset.destroy &&
         !window.matchMedia(parent.dataset.destroy).matches
@@ -108,16 +108,16 @@ export class Accordions {
     let openElements;
     if (parent) {
       openElements = parent.querySelectorAll(
-        '[data-accordion="element"].is-active'
+          "[data-accordion=\"element\"].is-active"
       );
     } else {
       openElements = document.querySelectorAll(
-        '[data-accordion="element"].is-active'
+          "[data-accordion=\"element\"].is-active"
       );
     }
     openElements.forEach((openElement) => {
       const innerParent = openElement.querySelector(
-        '[data-accordion="parent"]'
+          "[data-accordion=\"parent\"]"
       );
       if (innerParent) {
         return;
@@ -128,8 +128,8 @@ export class Accordions {
   }
 
   openAccordion(element, transition = true) {
-    const parentElement = element.closest('[data-accordion="parent"]');
-    const contentElement = element.querySelector('[data-accordion="content"]');
+    const parentElement = element.closest("[data-accordion=\"parent\"]");
+    const contentElement = element.querySelector("[data-accordion=\"content\"]");
     this._openHeight += contentElement.scrollHeight;
 
     if (parentElement.hasAttribute("data-single")) {
@@ -147,10 +147,10 @@ export class Accordions {
       });
     }
 
-    if (parentElement.closest('[data-accordion="element"]')) {
+    if (parentElement.closest("[data-accordion=\"element\"]")) {
       this.openAccordion(
-        parentElement.closest('[data-accordion="element"]'),
-        transition
+          parentElement.closest("[data-accordion=\"element\"]"),
+          transition
       );
       return;
     }
@@ -159,7 +159,7 @@ export class Accordions {
   }
 
   closeAccordion(element, transition = true) {
-    const contentElement = element.querySelector('[data-accordion="content"]');
+    const contentElement = element.querySelector("[data-accordion=\"content\"]");
     if (!contentElement) {
       return;
     }

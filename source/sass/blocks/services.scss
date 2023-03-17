@@ -8,7 +8,7 @@
     padding-bottom: 75px;
   }
 
-  @include vp-770 {
+  @include vp-768 {
     padding-bottom: 86px;
   }
 }
@@ -18,7 +18,7 @@
   margin-bottom: 50px;
   padding: 0;
 
-  @include vp-770 {
+  @include vp-768 {
     display: none;
   }
 }
@@ -75,7 +75,7 @@
     }
   }
 
-  @include vp-770 {
+  @include vp-768 {
     &::before {
       width: 40px;
       height: 40px;
@@ -101,7 +101,7 @@
     right: 0;
     z-index: 2;
     background: $color-deepsky-blue;
-    border-radius: 3px 0px 0px 0px;
+    border-radius: 3px;
     transition: opacity $trans-default;
   }
 }
@@ -116,7 +116,7 @@
   right: 20px;
   z-index: 3;
 
-  @include vp-770 {
+  @include vp-768 {
     bottom: 12px;
     right: 12px;
   }
@@ -124,6 +124,7 @@
 
 .services__img {
   background-color: $color-black-pearl;
+
   @include vp-1023 {
     width: 100%;
   }

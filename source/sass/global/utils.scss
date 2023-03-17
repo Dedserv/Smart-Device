@@ -79,7 +79,16 @@
   .footer__navigation-inner {
     padding-bottom: 20px;
   }
+
   .footer__contact-inner {
     padding-bottom: 20px;
+  }
+
+  .btn__unfold {
+    @include vp-768 {
+      &::before {
+        display: none;
+      }
+    }
   }
 }

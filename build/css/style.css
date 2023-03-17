@@ -440,7 +440,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Times", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -808,7 +808,7 @@ button,
   outline-offset: 1px;
 }
 
-.btn-unfold {
+.btn__unfold {
   display: none;
 }
 
@@ -959,9 +959,9 @@ button,
   height: 100%;
 }
 
-.modal__toogle {
-  width: 100%;
-  max-width: 100%;
+.modal__toogle label {
+  display: block;
+  width: 400px;
 }
 
 .custom-input,
@@ -1089,7 +1089,7 @@ button,
 }
 
 .custom-toggle label {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Times", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1161,7 +1161,7 @@ button,
 .custom-toggle input:checked + .custom-toggle__icon::before {
   content: "";
   position: absolute;
-  background-image: url("img/svg/apply.svg");
+  background-image: url("../img/svg/apply.svg");
   background-repeat: no-repeat;
   top: 3px;
   left: 2px;
@@ -1492,10 +1492,6 @@ button,
   margin-right: 8px;
 }
 
-.logotype__inner {
-  margin-left: 15px;
-}
-
 .logotype__title {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -1536,17 +1532,6 @@ button,
   align-items: center;
 }
 
-.logotype__title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 5px;
-}
-
-.logotype__subtitle {
-  margin: 0;
-  padding: 0;
-}
-
 .main-header__contact {
   width: 480px;
 }
@@ -1580,7 +1565,7 @@ button,
 }
 
 .main-header__list-link {
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Times", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1606,7 +1591,6 @@ button,
 }
 
 .form {
-  background: rgb(0, 85, 255);
   background: -o-linear-gradient(313deg, rgb(2, 101, 147) 0%, rgb(2, 101, 147) 33%, rgb(0, 179, 255) 33%, rgb(0, 179, 255) 100%);
   background: linear-gradient(137deg, rgb(2, 101, 147) 0%, rgb(2, 101, 147) 33%, rgb(0, 179, 255) 33%, rgb(0, 179, 255) 100%);
 }
@@ -1649,13 +1633,31 @@ button,
   margin-left: 25px;
 }
 
+.form__content h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.form__content p {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+}
+
 .form__img {
   margin-top: 75px;
   -ms-flex-negative: 1;
   flex-shrink: 1;
 }
 
-.form__input-decoration {
+.form__input-decoration input,
+.form__input-decoration textarea {
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   padding: 0 15px;
@@ -1665,8 +1667,9 @@ button,
   color: #ffffff;
 }
 
-.form__input-decoration::-webkit-input-placeholder {
-  font-family: "PT Mono", "Arial", sans-serif;
+.form__input-decoration input::-webkit-input-placeholder,
+.form__input-decoration textarea::-webkit-input-placeholder {
+  font-family: "PT Mono", "Times", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1675,8 +1678,9 @@ button,
   color: #ffffff;
 }
 
-.form__input-decoration::-moz-placeholder {
-  font-family: "PT Mono", "Arial", sans-serif;
+.form__input-decoration input::-moz-placeholder,
+.form__input-decoration textarea::-moz-placeholder {
+  font-family: "PT Mono", "Times", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1685,8 +1689,9 @@ button,
   color: #ffffff;
 }
 
-.form__input-decoration:-ms-input-placeholder {
-  font-family: "PT Mono", "Arial", sans-serif;
+.form__input-decoration input:-ms-input-placeholder,
+.form__input-decoration textarea:-ms-input-placeholder {
+  font-family: "PT Mono", "Times", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1695,8 +1700,9 @@ button,
   color: #ffffff;
 }
 
-.form__input-decoration::-ms-input-placeholder {
-  font-family: "PT Mono", "Arial", sans-serif;
+.form__input-decoration input::-ms-input-placeholder,
+.form__input-decoration textarea::-ms-input-placeholder {
+  font-family: "PT Mono", "Times", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1705,8 +1711,9 @@ button,
   color: #ffffff;
 }
 
-.form__input-decoration::placeholder {
-  font-family: "PT Mono", "Arial", sans-serif;
+.form__input-decoration input::placeholder,
+.form__input-decoration textarea::placeholder {
+  font-family: "PT Mono", "Times", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1715,7 +1722,8 @@ button,
   color: #ffffff;
 }
 
-.form__input-decoration.focus-visible:focus {
+.form__input-decoration input.focus-visible:focus,
+.form__input-decoration textarea.focus-visible:focus {
   outline: 1.5px solid #f2f5f7;
   border: none;
 }
@@ -1724,7 +1732,6 @@ button,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  width: 21%;
   margin-bottom: 20px;
   margin-right: 30px;
   padding: 0;
@@ -1734,14 +1741,20 @@ button,
   margin-right: 0;
 }
 
-.form__input-modal {
+.form__input-modal input {
   width: 420px;
   height: 50px;
   margin-bottom: 20px;
 }
 
 .form__input-textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+}
+
+.form__input-textarea textarea {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -1750,23 +1763,11 @@ button,
   margin-bottom: 25px;
 }
 
-.form__textarea-modal {
+.form__textarea-modal textarea {
   width: 420px;
   height: 155px;
   padding-top: 25px;
   margin-bottom: 25px;
-}
-
-.form__title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 15px;
-}
-
-.form__description {
-  margin: 0;
-  margin-bottom: 35px;
-  padding: 0;
 }
 
 .form__label {
@@ -1821,27 +1822,21 @@ button,
   z-index: 20;
 }
 
-.introducing__title-text {
+.introducing__inner h1 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-}
-
-.introducing__title {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
 }
 
-.introducing__description-text {
+.introducing__inner p {
   line-height: 155%;
   font-size: 22px;
-}
-
-.introducing__description {
   max-width: 685px;
   margin: 0;
   margin-bottom: 40px;
@@ -1879,6 +1874,31 @@ button,
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  color: #00b2ff;
+}
+
+.advantages__card h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00b2ff;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.advantages__card p {
+  color: #041827;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__card::before {
@@ -1893,58 +1913,23 @@ button,
 
 .advantages__card:hover {
   background-color: #00b2ff;
-}
-
-.advantages__card:hover .advantages__title-text {
   color: #f2f5f7;
 }
 
-.advantages__card:hover .advantages__description-text {
+.advantages__card:hover h3 {
   color: #f2f5f7;
 }
 
-.advantages__card:hover .advantages__image path {
-  fill: #f2f5f7;
+.advantages__card:hover p {
+  color: #f2f5f7;
+}
+
+.advantages__card:hover .advantages__image {
+  fill: #ffffff;
 }
 
 .advantages__card:nth-child(2n) {
   margin-left: 30px;
-}
-
-.advantages__image path {
-  -webkit-transition: fill 0.3s ease;
-  -o-transition: fill 0.3s ease;
-  transition: fill 0.3s ease;
-}
-
-.advantages__title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 15px;
-}
-
-.advantages__title-text {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 34px;
-  color: #00b2ff;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.advantages__description {
-  margin: 0;
-  padding: 0;
-}
-
-.advantages__description-text {
-  color: #041827;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
 }
 
 .about__wrapper {
@@ -1960,7 +1945,7 @@ button,
   margin-bottom: auto;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 156.248px;
+  font-size: 156px;
   line-height: 220px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -1975,27 +1960,24 @@ button,
   color: transparent;
 }
 
-.about__title {
+.about__inner {
+  color: #041827;
+}
+
+.about__inner h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
 }
 
-.about__title--text {
-  color: #041827;
-}
-
-.about__description {
+.about__inner p {
   margin: 0;
   margin-bottom: 22px;
-}
-
-.about__description:first-child {
-  margin-bottom: 0;
-}
-
-.about__description--text {
-  color: #041827;
 }
 
 .about__button {
@@ -2077,7 +2059,7 @@ button,
   right: 0;
   z-index: 2;
   background: #00b2ff;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -2231,10 +2213,6 @@ button,
   margin-bottom: 10px;
 }
 
-.footer__list-element:last-child {
-  margin-bottom: 0;
-}
-
 .footer__list-element a {
   font-size: 16px;
   line-height: 135%;
@@ -2368,20 +2346,20 @@ button,
     justify-content: none;
   }
 
+  .form__content h2 {
+    margin-bottom: 10px;
+  }
+
+  .form__content p {
+    margin-bottom: 25px;
+  }
+
   .form__content {
     margin: 0;
   }
 
   .form__img {
     display: none;
-  }
-
-  .form__title {
-    margin-bottom: 10px;
-  }
-
-  .form__description {
-    margin-bottom: 25px;
   }
 
   .form__button {
@@ -2410,19 +2388,19 @@ button,
     height: 540px;
   }
 
-  .introducing__inner {
-    top: 180px;
-    left: 0;
-    padding: 0 50px;
-  }
-
-  .introducing__title-text {
+  .introducing__inner h1 {
     font-size: 64px;
     line-height: 75px;
   }
 
-  .introducing__description {
+  .introducing__inner p {
     max-width: 670px;
+  }
+
+  .introducing__inner {
+    top: 180px;
+    left: 0;
+    padding: 0 50px;
   }
 
   .advantages__wrapper {
@@ -2528,7 +2506,11 @@ button,
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
+  .is-active .btn__unfold::before {
+    display: none;
+  }
+
   .container {
     padding: 0 25px;
   }
@@ -2538,7 +2520,7 @@ button,
     line-height: 39px;
   }
 
-  .btn-unfold {
+  .btn__unfold {
     display: block;
     position: absolute;
     top: 20px;
@@ -2552,7 +2534,7 @@ button,
     background-color: transparent;
   }
 
-  .btn-unfold::after {
+  .btn__unfold::after {
     position: absolute;
     content: "";
     width: 15px;
@@ -2562,7 +2544,7 @@ button,
     right: 0;
   }
 
-  .btn-unfold--show::before {
+  .btn__unfold::before {
     position: absolute;
     content: "";
     width: 15px;
@@ -2579,17 +2561,8 @@ button,
     margin-top: 5px;
   }
 
-  .logotype__img {
-    width: 35px;
-    height: 35px;
-  }
-
   .main-header {
     padding: 15px 0 20px;
-  }
-
-  .main-header__logo-inner {
-    display: none;
   }
 
   .form__wrapper {
@@ -2604,18 +2577,20 @@ button,
     flex-direction: column;
   }
 
+  .form__content h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .form__content p {
+    margin-bottom: 40px;
+  }
+
   .form__input {
     width: 100%;
     padding: 0;
     margin-right: 0;
-  }
-
-  .form__title {
-    margin-bottom: 20px;
-  }
-
-  .form__description {
-    margin-bottom: 40px;
   }
 
   .form__button {
@@ -2637,26 +2612,20 @@ button,
     height: 490px;
   }
 
+  .introducing__inner h1 {
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 270px;
+  }
+
+  .introducing__inner p {
+    font-size: 14px;
+    max-width: 270px;
+  }
+
   .introducing__inner {
     top: 150px;
     padding: 0 25px;
-  }
-
-  .introducing__title-text {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .introducing__title {
-    max-width: 270px;
-  }
-
-  .introducing__description-text {
-    font-size: 14px;
-  }
-
-  .introducing__description {
-    max-width: 270px;
   }
 
   .introducing__btn {
@@ -2679,6 +2648,16 @@ button,
     margin-top: 50px;
   }
 
+  .advantages__card h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages__card p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   .advantages__card {
     padding: 30px 30px 35px 30px;
     width: 100%;
@@ -2689,19 +2668,9 @@ button,
     margin-left: 0;
   }
 
-  .advantages__image {
+  .advantages__image svg {
     width: 30px;
     height: 30px;
-  }
-
-  .advantages__title-text {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-  .advantages__description-text {
-    font-size: 14px;
-    line-height: 19px;
   }
 
   .about__wrapper {
@@ -2712,7 +2681,12 @@ button,
     display: none;
   }
 
-  .about__description--text {
+  .about__inner h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about__inner p {
     font-size: 14px;
     line-height: 18px;
   }
@@ -2829,12 +2803,6 @@ button,
   }
 }
 
-@media (max-width: 769px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 769px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 769px) and (min-resolution: 144dpi), (max-width: 769px) and (min-resolution: 1.5dppx) {
-  .introducing::before {
-    background-image: url("../img/background-img_mobile@2x.jpg");
-  }
-}
-
 @media screen and (max-width: 767px) {
   .custom-input label,
   .custom-textarea label {
@@ -2883,6 +2851,12 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .introducing::before {
+    background-image: url("../img/background-img_mobile@2x.jpg");
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
@@ -2909,7 +2883,8 @@ button,
     opacity: 0.8;
   }
 
-  .form__input-decoration:hover:not(.focus-visible) {
+  .form__input-decoration input:hover:not(.focus-visible),
+  .form__input-decoration textarea:hover:not(.focus-visible) {
     background: rgba(4, 20, 39, 0.25);
   }
 }

@@ -1,6 +1,6 @@
-import {Validator} from './validator';
-import {callbacks} from './callback';
-import {initPhoneInput} from './init-phone-input';
+import {Validator} from "./validator";
+import {callbacks} from "./callback";
+import {initPhoneInput} from "./init-phone-input";
 
 export class Form {
   constructor() {
@@ -10,27 +10,27 @@ export class Form {
   }
 
   _resetSelect(select) {
-    const nativeSelect = select.querySelector('select');
+    const nativeSelect = select.querySelector("select");
     const activeIndex = nativeSelect.options.selectedIndex;
     const selectedOption = nativeSelect.options[activeIndex];
-    const buttonText = select.querySelector('.custom-select__text');
-    const selectItems = select.querySelectorAll('.custom-select__item');
+    const buttonText = select.querySelector(".custom-select__text");
+    const selectItems = select.querySelectorAll(".custom-select__item");
     buttonText.textContent = selectedOption.textContent;
     selectItems.forEach((item, index) => {
       if (index === activeIndex - 1) {
-        item.setAttribute('aria-selected', 'true');
+        item.setAttribute("aria-selected", "true");
         return;
       }
-      item.setAttribute('aria-selected', 'false');
+      item.setAttribute("aria-selected", "false");
     });
     if (!nativeSelect.value) {
-      select.classList.remove('not-empty');
-      select.classList.remove('is-valid');
+      select.classList.remove("not-empty");
+      select.classList.remove("is-valid");
     }
   }
 
   _resetSelects(form) {
-    const selects = form.querySelectorAll('[data-select]');
+    const selects = form.querySelectorAll("[data-select]");
     selects.forEach((select) => {
       this._resetSelect(select);
     });
@@ -38,9 +38,13 @@ export class Form {
 
   reset(form) {
     form.reset();
-    form.querySelectorAll('.is-invalid').forEach((item) => item.classList.remove('is-invalid'));
-    form.querySelectorAll('.is-valid').forEach((item) => item.classList.remove('is-valid'));
-    form.querySelectorAll('.input-message').forEach((item) => item.remove());
+    form
+        .querySelectorAll(".is-invalid")
+        .forEach((item) => item.classList.remove("is-invalid"));
+    form
+        .querySelectorAll(".is-valid")
+        .forEach((item) => item.classList.remove("is-valid"));
+    form.querySelectorAll(".input-message").forEach((item) => item.remove());
     setTimeout(() => {
       this._resetSelects(form);
     });
@@ -62,9 +66,14 @@ export class Form {
     if (this.validateForm(event.target) && callback) {
       this._callbacks[callback].successCallback(event);
       if (this._callbacks[callback].reset) {
-        setTimeout(() => {
-          this.reset(event.target);
-        }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
+        setTimeout(
+            () => {
+              this.reset(event.target);
+            },
+            this._callbacks[callback].resetTimeout
+              ? this._callbacks[callback].resetTimeout
+              : 500
+        );
       }
       return;
     }
@@ -79,33 +88,33 @@ export class Form {
   }
 
   _initValidate(parent) {
-    const form = parent.querySelector('form');
+    const form = parent.querySelector("form");
     if (!form) {
       return;
     }
 
-    const phoneParents = form.querySelectorAll('[data-validate-type="phone"]');
+    const phoneParents = form.querySelectorAll("[data-validate-type=\"phone\"]");
     phoneParents.forEach((item) => this._initPhoneInput(item));
 
     const callback = parent.dataset.callback;
     form.noValidate = true;
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener("submit", (event) => {
       event.preventDefault();
       this._onFormSubmit(event, callback);
     });
 
-    form.addEventListener('input', (event) => {
+    form.addEventListener("input", (event) => {
       this._onFormInput(event.target);
     });
 
-    form.addEventListener('reset', (event) => {
+    form.addEventListener("reset", (event) => {
       this.reset(event.target);
     });
   }
 
   init() {
-    this._validateParent = document.querySelectorAll('[data-form-validate]');
+    this._validateParent = document.querySelectorAll("[data-form-validate]");
     if (!this._validateParent.length) {
       return;
     }

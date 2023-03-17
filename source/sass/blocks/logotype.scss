@@ -23,24 +23,12 @@
   }
 }
 
-.logotype__img {
-  @include vp-770 {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-.logotype__inner {
-  margin-left: 15px;
-}
-
 .logotype__title {
   font-family: $ff-main-Roboto_condensed;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-
   color: $color-alice-blue;
 }
 

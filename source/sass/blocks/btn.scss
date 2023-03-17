@@ -17,9 +17,9 @@
   cursor: pointer;
 
   transition: opacity $trans-default;
+
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
@@ -83,10 +83,10 @@
   }
 }
 
-.btn-unfold {
+.btn__unfold {
   display: none;
 
-  @include vp-770 {
+  @include vp-768 {
     display: block;
     position: absolute;
     top: 20px;
@@ -108,11 +108,7 @@
       top: 7.5px;
       right: 0;
     }
-  }
-}
 
-.btn-unfold--show {
-  @include vp-770 {
     &::before {
       position: absolute;
       content: "";
