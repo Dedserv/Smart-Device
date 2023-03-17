@@ -11,7 +11,7 @@
   }
 
   label {
-    font-family: "PT Mono";
+    font-family: $ff-main-font;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -24,7 +24,7 @@
     margin-top: 10px;
     cursor: pointer;
 
-    @include vp-770 {
+    @include vp-768 {
       margin-top: 5px;
     }
 
@@ -90,7 +90,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("img/svg/apply.svg");
+      background-image: url("../img/svg/apply.svg");
       background-repeat: no-repeat;
       top: 3px;
       left: 2px;

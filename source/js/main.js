@@ -1,6 +1,6 @@
-import { iosVhFix } from "./utils/ios-vh-fix";
-import { initModals } from "./modules/modals/init-modals";
-import { Form } from "./modules/form-validate/form";
+import {iosVhFix} from "./utils/ios-vh-fix";
+import {initModals} from "./modules/modals/init-modals";
+import {Form} from "./modules/form-validate/form";
 import "./modules/button/button";
 import "./modules/accordion/init-accordion";
 import "./modules/accordion/accordions";

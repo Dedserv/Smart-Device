@@ -18,7 +18,8 @@
 
   color: $color-default-white;
 
-  transition: opacity $trans-modal, transform $trans-modal,
+  transition: opacity $trans-modal,
+    transform $trans-modal,
     visibility $trans-modal;
 
   pointer-events: none;
@@ -153,6 +154,8 @@
 }
 
 .modal__toogle {
-  width: 100%;
-  max-width: 100%;
+  label {
+    display: block;
+    width: 400px;
+  }
 }
