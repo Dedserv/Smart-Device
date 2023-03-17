@@ -20,6 +20,7 @@
   width: 48%;
   margin-bottom: 30px;
   transition: background-color $trans-default;
+  color: $color-deepsky-blue;
 
   h3 {
     margin: 0;
@@ -63,6 +64,7 @@
 
   &:hover {
     background-color: $color-deepsky-blue;
+    color: $color-alice-blue;
 
     h3 {
       color: $color-alice-blue;
@@ -97,10 +99,6 @@
 }
 
 .advantages__image {
-  // svg {
-  //   transition: fill $trans-default;
-  // }
-
   @include vp-768 {
     svg {
       width: 30px;

@@ -1874,6 +1874,7 @@ button,
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  color: #00b2ff;
 }
 
 .advantages__card h3 {
@@ -1912,6 +1913,7 @@ button,
 
 .advantages__card:hover {
   background-color: #00b2ff;
+  color: #f2f5f7;
 }
 
 .advantages__card:hover h3 {
@@ -2211,10 +2213,6 @@ button,
   margin-bottom: 10px;
 }
 
-.footer__list-element:last-child {
-  margin-bottom: 0;
-}
-
 .footer__list-element a {
   font-size: 16px;
   line-height: 135%;
@@ -2509,6 +2507,10 @@ button,
 }
 
 @media (max-width: 767px) {
+  .is-active .btn__unfold::before {
+    display: none;
+  }
+
   .container {
     padding: 0 25px;
   }
@@ -2542,7 +2544,7 @@ button,
     right: 0;
   }
 
-  .btn__unfold--show::before {
+  .btn__unfold::before {
     position: absolute;
     content: "";
     width: 15px;
