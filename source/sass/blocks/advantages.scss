@@ -1,8 +1,8 @@
 .advantages__wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: 120px;
-  justify-content: center;
 
   @include vp-1023 {
     margin-top: 80px;
@@ -17,8 +17,9 @@
   position: relative;
   padding: 40px 30px 35px 45px;
   border: 1px solid $color-whisper;
-  width: 48%;
+  width: 100%;
   margin-bottom: 30px;
+  max-width: 595px;
   transition: background-color $trans-default;
   color: $color-deepsky-blue;
 

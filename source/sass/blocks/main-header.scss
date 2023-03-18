@@ -41,6 +41,13 @@
 
 .main-header__list-item {
   transition: opacity $trans-default;
+  margin: 10px 10px 10px 0;
+  align-self: flex-start;
+  flex-grow: 1;
+
+  &:last-child {
+    margin-right: auto;
+  }
 
   @include hover {
     opacity: 0.8;
