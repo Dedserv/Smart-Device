@@ -84,17 +84,14 @@
 }
 
 .btn__unfold {
-  display: none;
+  padding: 0;
+  margin-bottom: 20px;
 
   @include vp-768 {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    padding: 0;
+    text-align: left;
+    padding: 20px 0;
     margin: 0;
-    width: 15px;
-    height: 15px;
+    width: 100%;
     border: none;
     outline: none;
     background-color: transparent;
@@ -105,7 +102,7 @@
       width: 15px;
       height: 1px;
       background-color: $color-silver;
-      top: 7.5px;
+      top: 27px;
       right: 0;
     }
 
@@ -115,9 +112,19 @@
       width: 15px;
       height: 1px;
       background-color: $color-silver;
-      top: 7.5px;
+      top: 27px;
       right: 0;
       transform: rotate(90deg);
     }
   }
+}
+
+.btn__unfold-text {
+  font-family: $ff-main-Roboto_condensed;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
 }

@@ -440,7 +440,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -809,7 +809,18 @@ button,
 }
 
 .btn__unfold {
-  display: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.btn__unfold-text {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .modal {
@@ -1089,7 +1100,7 @@ button,
 }
 
 .custom-toggle label {
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1558,6 +1569,16 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  margin: 10px 10px 10px 0;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.main-header__list-item:last-child {
+  margin-right: auto;
 }
 
 .main-header__list-item a:active {
@@ -1565,7 +1586,7 @@ button,
 }
 
 .main-header__list-link {
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1669,7 +1690,7 @@ button,
 
 .form__input-decoration input::-webkit-input-placeholder,
 .form__input-decoration textarea::-webkit-input-placeholder {
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1680,7 +1701,7 @@ button,
 
 .form__input-decoration input::-moz-placeholder,
 .form__input-decoration textarea::-moz-placeholder {
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1691,7 +1712,7 @@ button,
 
 .form__input-decoration input:-ms-input-placeholder,
 .form__input-decoration textarea:-ms-input-placeholder {
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1702,7 +1723,7 @@ button,
 
 .form__input-decoration input::-ms-input-placeholder,
 .form__input-decoration textarea::-ms-input-placeholder {
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1713,7 +1734,7 @@ button,
 
 .form__input-decoration input::placeholder,
 .form__input-decoration textarea::placeholder {
-  font-family: "PT Mono", "Times", serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1817,6 +1838,7 @@ button,
 
 .introducing__inner {
   position: absolute;
+  max-width: 1024px;
   top: 285px;
   left: 22%;
   z-index: 20;
@@ -1859,18 +1881,19 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-top: 120px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .advantages__card {
   position: relative;
   padding: 40px 30px 35px 45px;
   border: 1px solid #ebebeb;
-  width: 48%;
+  width: 100%;
   margin-bottom: 30px;
+  max-width: 595px;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
@@ -2166,19 +2189,6 @@ button,
 
 .footer__contact-inner {
   margin-left: 30px;
-}
-
-.footer__title {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 .footer__navigation {
@@ -2521,14 +2531,10 @@ button,
   }
 
   .btn__unfold {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    padding: 0;
+    text-align: left;
+    padding: 20px 0;
     margin: 0;
-    width: 15px;
-    height: 15px;
+    width: 100%;
     border: none;
     outline: none;
     background-color: transparent;
@@ -2540,7 +2546,7 @@ button,
     width: 15px;
     height: 1px;
     background-color: #c4c4c4;
-    top: 7.5px;
+    top: 27px;
     right: 0;
   }
 
@@ -2550,7 +2556,7 @@ button,
     width: 15px;
     height: 1px;
     background-color: #c4c4c4;
-    top: 7.5px;
+    top: 27px;
     right: 0;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -2767,15 +2773,6 @@ button,
     max-width: 320px;
   }
 
-  .footer__title {
-    padding-top: 20px;
-    margin: 0;
-  }
-
-  .footer__navigation {
-    margin-top: 15px;
-  }
-
   .footer__inner {
     margin: 0;
     -webkit-box-orient: vertical;
@@ -2796,10 +2793,6 @@ button,
     left: -24px;
     border-bottom: 1px solid #ffffff;
     width: calc(100% + 48px);
-  }
-
-  .footer__contact-list {
-    margin-top: 15px;
   }
 }
 
