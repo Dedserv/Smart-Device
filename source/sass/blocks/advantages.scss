@@ -9,17 +9,18 @@
   }
 
   @include vp-768 {
-    margin-top: 50px;
+    margin-top: 54px;
   }
 }
 
 .advantages__card {
   position: relative;
-  padding: 40px 30px 35px 45px;
+  padding: 40px 30px 55px 45px;
   border: 1px solid $color-whisper;
-  width: 100%;
-  margin-bottom: 30px;
   max-width: 595px;
+  flex: 1 1 42%;
+  min-height: 300px;
+  margin-bottom: 30px;
   transition: background-color $trans-default;
   color: $color-deepsky-blue;
 
@@ -34,6 +35,10 @@
     line-height: 34px;
     color: $color-deepsky-blue;
     transition: color $trans-default;
+
+    @include vp-1023 {
+      margin-bottom: 8px;
+    }
 
     @include vp-768 {
       font-size: 20px;
@@ -85,12 +90,19 @@
   }
 
   @include vp-1023 {
-    width: 41%;
+    padding: 40px 30px 30px 45px;
+    min-height: 360px;
+    min-width: 318px;
+    flex: 1 1 42.7%;
   }
 
   @include vp-768 {
-    padding: 30px 30px 35px 30px;
+    flex: auto;
+    min-height: 325px;
+    padding: 30px 30px 30px 28px;
     width: 100%;
+    max-width: 100%;
+    min-width: 270px;
     margin-left: 0;
 
     &:nth-child(2n) {
@@ -99,11 +111,28 @@
   }
 }
 
-.advantages__image {
+.advantages__card--max {
   @include vp-768 {
-    svg {
-      width: 30px;
-      height: 30px;
+    .advantages__image {
+      margin-bottom: 6px;
     }
+
+    min-height: 340px;
+  }
+}
+
+.advantages__image {
+  margin-bottom: 16px;
+  width: 35px;
+  height: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
+
+  @include vp-768 {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 12px;
   }
 }

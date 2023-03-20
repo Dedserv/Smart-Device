@@ -26,11 +26,11 @@
 
   @include vp-1023 {
     display: block;
-    padding: 50px 50px 125px;
+    padding: 50px 50px 120px;
   }
 
   @include vp-768 {
-    padding: 50px 25px 90px;
+    padding: 50px 25px 85px;
   }
 }
 
@@ -55,7 +55,7 @@
 }
 
 .form__content {
-  margin-left: 25px;
+  margin: 0 12px;
 
   h2 {
     font-family: $ff-main-Roboto_condensed;
@@ -73,8 +73,8 @@
     }
 
     @include vp-768 {
-      margin-bottom: 20px;
-      font-size: 28px;
+      margin-bottom: 12px;
+      font-size: 30px;
       line-height: 39px;
     }
   }
@@ -89,7 +89,9 @@
     }
 
     @include vp-768 {
-      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 32px;
     }
   }
 
@@ -167,12 +169,17 @@
 .form__input-textarea {
   display: flex;
   width: 100%;
+  margin-bottom: 32px;
 
   textarea {
     flex-grow: 1;
     height: 155px;
     padding-top: 25px;
-    margin-bottom: 25px;
+
+    @include vp-768 {
+      margin-bottom: 35px;
+      height: 180px;
+    }
   }
 }
 
@@ -191,13 +198,17 @@
 
 .form__button {
   max-width: 265px;
-  width: 44%;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 0;
+  padding: 15px 0;
 
   @include vp-1023 {
     margin-right: 85px;
   }
 
   @include vp-768 {
+    margin-bottom: 18px;
     max-width: 100%;
     width: 100%;
     margin-right: 0;
@@ -216,5 +227,14 @@
 .form__control-element {
   @include vp-1023 {
     top: 26px;
+  }
+}
+
+.form__input-checkbox {
+  margin-top: 5px;
+  margin-right: 5px;
+
+  @include vp-768 {
+    margin-left: 5px;
   }
 }
