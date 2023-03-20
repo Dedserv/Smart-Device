@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Проект Smart-Device">
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css" />
     <link
@@ -93,7 +94,7 @@
           <div class="container">
             <h2 class="visually-hidden">Преимущества</h2>
             <div class="advantages__wrapper">
-              <div class="advantages__card">
+              <div class="advantages__card advantages__card--max">
                 <svg class="advantages__image" width="35" height="35">
                   <use href="img/sprite.svg#watch"></use>
                 </svg>
@@ -104,7 +105,7 @@
                   комплектующих в самые короткие сроки
                 </p>
               </div>
-              <div class="advantages__card">
+              <div class="advantages__card advantages__card--max">
                 <svg class="advantages__image" width="35" height="35">
                   <use href="img/sprite/sprite.svg#hired"></use>
                 </svg>
@@ -134,8 +135,9 @@
 
                 <h3>Персонализация стоимости</h3>
                 <p>
-                  Мы подбираем определенную фабрику, поставщиков, вид доставки,
-                  чтобы установить ту цену, которая Вас устраивает.
+                  Мы &nbsp;подбираем <br />
+                  определенную фабрику, поставщиков, вид доставки, чтобы
+                  установить ту цену, которая Вас устраивает.
                 </p>
               </div>
             </div>
@@ -145,21 +147,31 @@
           <div class="about__wrapper">
             <span class="about__year">2022</span>
             <div class="about__inner" data-accordion="parent">
-              <h2>О компании</h2>
-              <p>
-                Мы поставляем электронные комплектующие, производим печатные
-                платы и предоставляем мировые технологии с 1997 года. Выполняем
-                срочные заказы и пилотные образцы до 10 дней.
-              </p>
-              <p>
-                Наши поставщики - мировые производители электронных компонентов:
-                OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и
-                комплектующие Service Devices применяются на предприятиях
-                Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ),
-                МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
-                Производители светотехники России.
-              </p>
-              <div data-accordion="element">
+              <div class="about__content">
+                <h2>О компании</h2>
+                <p>
+                  Мы поставляем электронные комплектующие, производим печатные
+                  платы и предоставляем мировые технологии с 1997 года.
+                  Выполняем срочные заказы и пилотные образцы до 10 дней.
+                </p>
+                <p>
+                  Наши поставщики - мировые производители электронных
+                  компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                </p>
+                <p>
+                  Печатные платы и комплектующие Service Devices применяются на
+                  предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома
+                  (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
+                  крупнейшие Производители светотехники России.
+                </p>
+              </div>
+              <div class="about__element" data-accordion="element">
+                <p data-accordion="content">
+                  Печатные платы и комплектующие Service Devices применяются на
+                  предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома
+                  (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
+                  крупнейшие Производители светотехники России.
+                </p>
                 <p data-accordion="content">
                   Smart Device - это команда профессионалов. Через нас прошло
                   более 1 000 000 клиентов, 70% из которых продолжают
@@ -186,7 +198,7 @@
               Smart Device предлагает следующие товары и услуги
             </h2>
             <h2 class="title services__title-mobile">
-              Товары и услуги Smart Device
+              Товары и услуги &nbsp; Smart Device
             </h2>
             <div class="services__card-wrapper">
               <a class="services__link" href="#">
@@ -303,7 +315,7 @@
                       alt="" />
                   </picture>
                   <p class="services__card-title services__card-text">
-                    Монтаж печатных плат
+                    Монтаж <br> печатных плат
                   </p>
                   <svg class="services__icon" width="21" height="20">
                     <use href="img/sprite.svg#arrow"></use>
@@ -380,7 +392,6 @@
                 type="image/webp"
                 width="510"
                 height="285"
-                media="(min-width: 1024px)"
                 srcset="
                   img/paper_airplane.webp    1x,
                   img/paper_airplane@2x.webp 2x
@@ -440,7 +451,7 @@
                       Задать вопрос
                     </button>
                     <div
-                      class="custom-toggle custom-toggle--checkbox"
+                      class="custom-toggle custom-toggle--checkbox form__input-checkbox"
                       data-validate-type="checkbox"
                       data-message-base="Поле обязательно к заполнению">
                       <label
@@ -520,14 +531,16 @@
             class="footer__inner"
             data-accordion="parent"
             data-single
-            data-destroy="(max-width: 769px)">
+            data-destroy="(max-width: 767px)">
             <div class="footer__navigation-wrapper">
               <div class="footer__navigation-inner" data-accordion="element">
                 <button
                   class="btn btn__unfold btn__unfold-text"
                   type="button"
                   aria-label="Развернуть список"
-                  data-accordion="button">Разделы сайта</button>
+                  data-accordion="button">
+                  Разделы сайта
+                </button>
                 <nav class="footer__navigation" data-accordion="content">
                   <ul class="footer__navigation-list">
                     <li class="footer__list-element">
@@ -561,16 +574,18 @@
                 </nav>
               </div>
             </div>
-            <div class="footer__contact-wrapper" >
-              <div class="footer__contact-inner is-active" data-accordion="element">
+            <div class="footer__contact-wrapper">
+              <div
+                class="footer__contact-inner is-active"
+                data-accordion="element">
                 <button
                   type="button"
                   class="btn btn__unfold btn__unfold-text"
                   aria-label="Развернуть список"
-                  data-accordion="button">Наш офис</button>
-                <ul
-                  class="footer__contact-list"
-                  data-accordion="content">
+                  data-accordion="button">
+                  Наш офис
+                </button>
+                <ul class="footer__contact-list" data-accordion="content">
                   <li class="footer__list-element">
                     г. Мытищи, Олимпийский проспект, д.10
                   </li>

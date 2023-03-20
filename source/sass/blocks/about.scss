@@ -1,13 +1,13 @@
 .about__wrapper {
   display: flex;
-  margin: 95px 0 100px;
+  margin: 90px 0 100px;
 
   @include vp-1023 {
-    margin: 50px 0 80px;
+    margin: 48px 0 70px;
   }
 
   @include vp-768 {
-    margin: 20px 0 80px;
+    margin: 20px 0 76px;
   }
 }
 
@@ -15,6 +15,7 @@
   position: relative;
   display: block;
   margin-bottom: auto;
+  margin-left: -15px;
   font-family: $ff-main-Roboto_condensed;
   font-weight: 700;
   font-size: 156px;
@@ -32,6 +33,10 @@
     background-position: 42% 40%;
   }
 
+  @include vp-1023 {
+    margin-left: -20px;
+  }
+
   @include vp-768 {
     display: none;
   }
@@ -39,6 +44,7 @@
 
 .about__inner {
   color: $color-black-pearl;
+  margin-left: 45px;
 
   h2 {
     font-family: $ff-main-Roboto_condensed;
@@ -51,6 +57,7 @@
     padding: 0;
 
     @include vp-768 {
+      margin-bottom: 10px;
       font-size: 28px;
       line-height: 39px;
     }
@@ -58,12 +65,34 @@
 
   p {
     margin: 0;
-    margin-bottom: 22px;
+    // margin-bottom: 22px;
+
+    &:first-child {
+      @include vp-1023 {
+        margin-bottom: 0;
+      }
+    }
+
+    &:first-of-type {
+      margin-bottom: 22px;
+    }
 
     @include vp-768 {
       font-size: 14px;
       line-height: 18px;
     }
+  }
+
+  .is-active p:first-child {
+    margin-bottom: 22px;
+  }
+
+  @include vp-1023 {
+    margin-left: -24px;
+  }
+
+  @include vp-768 {
+    margin-left: 0;
   }
 }
 
@@ -76,5 +105,31 @@
   @include vp-768 {
     width: 160px;
     height: 35px;
+  }
+}
+
+.about__content {
+  @include vp-768 {
+    p:last-child {
+      display: none;
+    }
+  }
+}
+
+.about__element {
+  :first-child {
+    display: none;
+
+    @include vp-768 {
+      display: block;
+    }
+  }
+
+  p {
+    margin: 22px 0;
+
+    @include vp-1023 {
+      margin: 8px 0;
+    }
   }
 }

@@ -5,10 +5,12 @@
   padding-bottom: 140px;
 
   @include vp-1023 {
+    padding-top: 60px;
     padding-bottom: 75px;
   }
 
   @include vp-768 {
+    padding-top: 46px;
     padding-bottom: 86px;
   }
 }
@@ -18,6 +20,10 @@
   margin-bottom: 50px;
   padding: 0;
 
+  @include vp-1023 {
+    margin-bottom: 34px;
+  }
+
   @include vp-768 {
     display: none;
   }
@@ -26,10 +32,10 @@
 .services__title-mobile {
   display: none;
 
-  @media (max-width: 770px) {
+  @include vp-768 {
     display: inline-block;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     padding: 0;
   }
 }
@@ -137,8 +143,27 @@
   padding: 0;
   margin: 0;
   z-index: 2;
-  top: 40px;
-  left: 50px;
+  top: 50px;
+  left: 40px;
+
+  br {
+    display: none;
+  }
+
+  @include vp-1023 {
+    top: 40px;
+    left: 45px;
+    max-width: 150px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @include vp-768 {
+    top: 30px;
+    left: 30px;
+  }
 }
 
 .services__card-text {
@@ -146,4 +171,8 @@
   font-size: 20px;
   line-height: 30px;
   color: $color-default-white;
+
+  @include vp-768 {
+    font-size: 18px;
+  }
 }

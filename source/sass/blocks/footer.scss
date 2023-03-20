@@ -34,7 +34,7 @@
   @include vp-768 {
     position: relative;
     flex-direction: column;
-    padding-bottom: 25px;
+    padding-bottom: 18px;
     align-items: center;
 
     &::before {
@@ -51,6 +51,23 @@
 .footer__logotype {
   margin-bottom: 30px;
   margin-right: 20px;
+
+  @include vp-1023 {
+    margin-bottom: 35px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+}
+
+.footer__social {
+  margin-left: 10px;
+
+  @include vp-768 {
+    margin-left: 0;
+  }
 }
 
 .footer__social-list {
@@ -146,6 +163,7 @@
 .footer__inner {
   display: flex;
   width: 100%;
+  margin-top: 5px;
 
   @include vp-1023 {
     width: 100%;
@@ -177,10 +195,20 @@
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 10px;
 
+  @include vp-768 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   a {
     font-size: 16px;
     line-height: 135%;
     color: rgba(255, 255, 255, 0.7);
+
+    @include vp-768 {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 }
 
@@ -193,6 +221,10 @@
 }
 
 .footer__contact-wrapper {
+  @include vp-1023 {
+    max-width: 320px;
+  }
+
   @include vp-768 {
     width: 100%;
     position: relative;
