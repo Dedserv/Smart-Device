@@ -17,6 +17,7 @@
 .logotype__link {
   display: flex;
   margin-right: 8px;
+  background-color: $color-black-pearl;
 
   @include vp-1023 {
     margin-right: 0;

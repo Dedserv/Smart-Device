@@ -108,7 +108,7 @@
   position: absolute;
   max-width: 1024px;
   top: 305px;
-  left: 43%;
+  left: 43.3%;
   transform: translateX(-50%);
   z-index: 20;
 
@@ -120,7 +120,7 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     padding: 0;
 
     @include vp-1023 {
@@ -142,7 +142,7 @@
     font-size: 22px;
     max-width: 685px;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     padding: 0;
 
     @include vp-1023 {
@@ -190,6 +190,7 @@
 }
 
 .introducing__btn-text {
+  letter-spacing: 0.05em;
   @include vp-768 {
     display: none;
   }
