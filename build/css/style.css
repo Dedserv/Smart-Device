@@ -1501,6 +1501,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin-right: 8px;
+  background-color: #041827;
 }
 
 .logotype__title {
@@ -1845,7 +1846,7 @@ button,
   position: absolute;
   max-width: 1024px;
   top: 305px;
-  left: 43%;
+  left: 43.3%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -1860,7 +1861,7 @@ button,
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   padding: 0;
 }
 
@@ -1869,7 +1870,7 @@ button,
   font-size: 22px;
   max-width: 685px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
   padding: 0;
 }
 
@@ -1877,6 +1878,10 @@ button,
   width: 410px;
   height: 55px;
   padding: 15px 25px;
+}
+
+.introducing__btn-text {
+  letter-spacing: 0.05em;
 }
 
 .introducing__btn-text-mobile {
@@ -1967,6 +1972,7 @@ button,
 }
 
 .advantages__image {
+  background-color: #ffffff;
   margin-bottom: 16px;
   width: 35px;
   height: 35px;
@@ -2767,7 +2773,6 @@ button,
 
   .introducing__inner p {
     margin-bottom: 44px;
-    max-width: 272px;
     width: 100%;
     font-size: 14px;
     max-width: 270px;
@@ -2995,6 +3000,7 @@ button,
 
   .footer__contact-wrapper {
     width: 100%;
+    max-width: 100%;
     position: relative;
   }
 
