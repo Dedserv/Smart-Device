@@ -12,16 +12,15 @@
       opacity: 0.6;
     }
   }
+
+  @include vp-768 {
+    padding-top: 15px;
+  }
 }
 
 .logotype__link {
   display: flex;
-  margin-right: 8px;
   background-color: $color-black-pearl;
-
-  @include vp-1023 {
-    margin-right: 0;
-  }
 }
 
 .logotype__title {

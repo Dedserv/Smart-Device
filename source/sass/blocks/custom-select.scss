@@ -17,7 +17,7 @@
 
     transform: translateY(-50%);
 
-    transition: transform $trans-default, opacity  $trans-default;
+    transition: transform $trans-default, opacity $trans-default;
 
     pointer-events: none;
 
@@ -299,4 +299,8 @@
       color: #15ab07;
     }
   }
+}
+
+.focus-visible + .custom-toggle__icon {
+  border: 1px solid $color-default-black;
 }
