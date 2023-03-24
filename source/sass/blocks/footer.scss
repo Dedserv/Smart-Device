@@ -15,17 +15,27 @@
 .footer__wrapper {
   display: flex;
   margin: 0 auto;
+  width: 100%;
+  max-width: 1302px;
+  padding: 0 40px;
 
   @include vp-1023 {
     max-width: 860px;
     flex-direction: column;
+    padding: 0 50px;
+  }
+
+  @include vp-768 {
+    padding: 0;
   }
 }
 
 .footer__social-wrapper {
   flex-shrink: 0;
+  margin-right: 34px;
 
   @include vp-1023 {
+    margin-right: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -34,16 +44,16 @@
   @include vp-768 {
     position: relative;
     flex-direction: column;
-    padding-bottom: 18px;
+    padding-bottom: 14px;
     align-items: center;
 
     &::before {
       position: absolute;
       content: "";
       bottom: 0;
-      left: -24px;
+      left: 0;
       border-bottom: 1px solid $color-default-white;
-      width: calc(100% + 48px);
+      width: 100%;
     }
   }
 }
@@ -57,6 +67,7 @@
   }
 
   @include vp-768 {
+    padding-top: 0;
     margin-bottom: 15px;
     margin-right: 10px;
   }
@@ -65,8 +76,13 @@
 .footer__social {
   margin-left: 10px;
 
-  @include vp-768 {
+  @include vp-1023 {
+    margin-top: 6px;
     margin-left: 0;
+  }
+
+  @include vp-768 {
+    margin-top: 0;
   }
 }
 
@@ -77,17 +93,18 @@
   max-width: 150px;
   padding: 0;
   margin: 0;
+
+  @include vp-1023 {
+    margin-left: 6px;
+  }
 }
 
 .footer__social-element {
   margin-right: 15px;
+  margin-bottom: 5px;
 
   &:nth-child(3n) {
     margin-right: 0;
-  }
-
-  &:nth-child(4n) {
-    margin-top: 10px;
   }
 }
 
@@ -121,9 +138,9 @@
       position: absolute;
       content: "";
       bottom: 0;
-      left: -24px;
+      left: 0;
       border-bottom: 1px solid $color-default-white;
-      width: calc(100% + 48px);
+      width: 100%;
     }
   }
 }
@@ -133,7 +150,6 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    max-width: 320px;
   }
 }
 
@@ -148,7 +164,6 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    max-width: 320px;
   }
 }
 
@@ -157,6 +172,10 @@
 
   @include vp-1023 {
     flex-direction: column;
+  }
+
+  @include vp-768 {
+    padding: 0 25px;
   }
 }
 
@@ -234,9 +253,9 @@
       position: absolute;
       content: "";
       bottom: 0;
-      left: -24px;
+      left: 0;
       border-bottom: 1px solid $color-default-white;
-      width: calc(100% + 48px);
+      width: 100%;
     }
   }
 }
@@ -246,4 +265,8 @@
   padding: 0;
   list-style-type: none;
   max-width: 345px;
+
+  @include vp-768 {
+    padding: 0 25px;
+  }
 }

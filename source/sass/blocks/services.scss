@@ -2,16 +2,16 @@
   background-color: $color-black-pearl;
   width: 100%;
   padding-top: 70px;
-  padding-bottom: 140px;
+  padding-bottom: 110px;
 
   @include vp-1023 {
     padding-top: 60px;
-    padding-bottom: 75px;
+    padding-bottom: 44px;
   }
 
   @include vp-768 {
     padding-top: 46px;
-    padding-bottom: 86px;
+    padding-bottom: 56px;
   }
 }
 
@@ -42,7 +42,8 @@
 
 .services__card-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   text-align: center;
   width: 100%;
 
@@ -70,15 +71,19 @@
 
 .services__link {
   position: relative;
-  width: 28.65%;
+  max-width: 350px;
+  flex: 1 1 27%;
+  margin-right: 85px;
+  margin-bottom: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 
   @include vp-1023 {
+    margin-right: 0;
+    max-width: 100%;
     width: 100%;
-    margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   @include vp-768 {
